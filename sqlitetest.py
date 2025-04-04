@@ -1,6 +1,8 @@
 import sqlite3
 from time import sleep
-from colorama import Fore, Style
+from colorama import init, Fore, Style
+
+init(convert=True)
 
 print(Fore.CYAN + "Olá, Seja bem vindo ao JairoDB")
 print("")

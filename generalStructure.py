@@ -10,8 +10,6 @@ from utils import exitApp, rangeOptions
 def inputUserChoice():
     global choice
     choice = inputUser()
-    print(choice)
-
 ###### CONVERT COLORAMA PARA CMD, POWERSHELL, BASH ETC....
 init(convert=True)
 
@@ -30,5 +28,3 @@ def mainApp():
         else:
             exitApp()
             break
-
-mainApp()

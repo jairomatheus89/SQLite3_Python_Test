@@ -47,7 +47,7 @@ com o ambiente virtual **ATIVADO**(voce vera a sigla `(venv)` no diretorio do se
 
 ## 8 passo
 
-após instalar as dependencias rode o comando `python Application.py` para iniciar a aplicação!
+após instalar as dependencias rode o comando `python runApp.py` para iniciar a aplicação!
 
   
 

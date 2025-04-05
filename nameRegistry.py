@@ -3,7 +3,7 @@ from colorama import Fore, Style
 ####### FUNÇÃO DE CADASTRO DE NOME ###########
 def nameRegistry():
     username_registry = input("Digite seu nome para cadastro: ")
-    if username_registry:
+    if not " " in username_registry and len(username_registry) > 4:
         valueregistry = username_registry
         valueregistry = valueregistry.lower()    
         conn = sqlite3.connect('example.db')
@@ -23,4 +23,6 @@ def nameRegistry():
             print(Fore.BLUE +"Nome cadastrado com sucesso!" + Style.RESET_ALL)
             print("")
     else:
-        valueregistry = "Por Favor tente novamente digitando um nome!"
+        print("")
+        print(Fore.RED + "Não pode conter espaços e DEVE conter mais que 4 caracteres" + Style.RESET_ALL)
+        print("")

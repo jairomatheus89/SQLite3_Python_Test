@@ -1,9 +1,16 @@
 import sqlite3
 from colorama import Fore, Style
+import re
+
+##### FUNÇÃO PARA CHECAR CARACTERES ESPECIAIS #######
+def have_special_characteres(s):
+    detect_pattern = re.compile(r'[^a-zA-Z0-9]')
+    return bool(detect_pattern.search(s))
+
 ####### FUNÇÃO DE CADASTRO DE NOME ###########
 def nameRegistry():
     username_registry = input("Digite seu nome para cadastro: ")
-    if not " " in username_registry and len(username_registry) > 4:
+    if not " " in username_registry and len(username_registry) > 4 and not have_special_characteres(username_registry):
         valueregistry = username_registry
         valueregistry = valueregistry.lower()    
         conn = sqlite3.connect('example.db')
@@ -32,5 +39,5 @@ def nameRegistry():
             print("")
     else:
         print("")
-        print(Fore.RED + "Não pode conter espaços e DEVE conter mais que 4 caracteres" + Style.RESET_ALL)
+        print(Fore.RED + "NÃO pode conter espaços, DEVE conter mais que 4 caracteres e NÃO DEVE conter caracteres especiais" + Style.RESET_ALL)
         print("")

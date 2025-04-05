@@ -55,5 +55,9 @@ após instalar as dependencias rode o comando `python runApp.py` para iniciar a 
 
   
 
-### OBS: SEMPRE QUE FOR RODAR O PROJETO TEM QUE INICIALIZAR O AMBIENTE VIRTUAL **cmd/powershell**:`.\venv\Scripts\activate` **bash**:`source venv/Scripts/activate`
+### OBS:
+1:
+SEMPRE QUE FOR RODAR O PROJETO TEM QUE INICIALIZAR O AMBIENTE VIRTUAL **cmd/powershell**:`.\venv\Scripts\activate` **bash**:`source venv/Scripts/activate`
 #### se nao quiser inicializar o ambiente virtual sempre, terás que ir no arquivo `requirements.txt` e instalar na sua maquina as dependencias de maneira global(**_Não recomendado_**)
+2:
+Se quiser buildar um executável para testar na maquina sem precisar de prompt de comando utilize o comando `python setup.py build`. Ele irá criar uma pasta build com um **.exe** dentro. Só executar e ser feliz! :smile: :snake:

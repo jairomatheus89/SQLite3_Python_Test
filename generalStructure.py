@@ -1,10 +1,10 @@
 from colorama import init, Fore, Style, Back
-
 ######### MY MODULES IMPORTS #########
 from userInput import inputUser
 from nameRegistry import nameRegistry
 from searchUsername import searchUsername
 from utils import exitApp, rangeOptions
+from listAll import listAll
 
 #### CALL VARIABLE CHOICE FROM inputUser Function of userInput custom MODULE
 def inputUserChoice():
@@ -23,7 +23,9 @@ def mainApp():
             nameRegistry()
         elif choice == 2:
             searchUsername()
-        elif choice > 3 or choice < 1:
+        elif choice == 3:
+            listAll()
+        elif choice > 4 or choice < 1:
             rangeOptions()
         else:
             exitApp()

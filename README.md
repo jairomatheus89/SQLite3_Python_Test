@@ -24,7 +24,7 @@ abra o cmd, powershell ou gitBash(preferivel), clone o projeto com o comando:
 
 ## 4 passo
 
-acesse o diretorio do projeto clonado, voce vera os arquivos principais(`Application.py, example.db, requirements.txt`)
+acesse o diretorio do projeto clonado, voce vera os arquivos principais(`runApp.py, generalStructure.py, example.db, requirements.txt`)
 
   
 

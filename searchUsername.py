@@ -7,6 +7,13 @@ def searchUsername():
     user_search = user_search.lower()
     conn = sqlite3.connect('example.db')
     cursor = conn.cursor()
+
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS users(
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT NOT NULL
+        );       
+    ''')
     cursor.execute('SELECT name FROM users WHERE name = ?;',(user_search,))
     name_selected = cursor.fetchone()
     if name_selected:

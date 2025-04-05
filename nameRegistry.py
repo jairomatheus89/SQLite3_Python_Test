@@ -8,6 +8,14 @@ def nameRegistry():
         valueregistry = valueregistry.lower()    
         conn = sqlite3.connect('example.db')
         cursor = conn.cursor()
+
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS users(
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                name TEXT NOT NULL
+            );       
+        ''')
+
         checkQuery_name = f"SELECT EXISTS(SELECT 1 FROM users WHERE name = ? LIMIT 1)"
         cursor.execute(checkQuery_name,(valueregistry,))
         exist_name = cursor.fetchone()
